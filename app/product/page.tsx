@@ -1,6 +1,16 @@
 import ProductCart from '@/components/Product/ProductCart';
 import Link from 'next/link'
 import React from 'react'
+export interface CategoryType {
+    _id: string;
+    name: string;
+    description: string;
+    image: string;
+    image_id: string;
+    createdAt: string;
+    updatedAt: string;
+    __v: number;
+}
 export interface ProductType {
     _id: string
 
@@ -17,7 +27,7 @@ export interface ProductType {
 
     quantity: number
 
-    category: string
+    category: CategoryType
     payment: string
 
     images: {

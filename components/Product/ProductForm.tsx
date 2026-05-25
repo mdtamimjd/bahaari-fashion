@@ -4,6 +4,7 @@ import TextEditor from '../TextEditor'
 import Image from 'next/image'
 import { DeleteImage, UploadImage } from '@/helper/UploadImages'
 import { useRouter } from 'next/navigation'
+import mongoose from 'mongoose'
 
 export default function ProductForm() {
     const router = useRouter()

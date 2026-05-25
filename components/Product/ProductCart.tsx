@@ -2,7 +2,7 @@
 import { ProductType } from '@/app/product/page'
 import Image from 'next/image'
 import { useRouter } from 'next/navigation'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 export default function ProductCart(data:ProductType) {
     const router = useRouter()
@@ -26,7 +26,7 @@ export default function ProductCart(data:ProductType) {
         <div>
             <h1 className='text-3xl font-bold'>{data.title}</h1>
             <div className='flex justify-between items-center'>
-                <p className='p-2 rounded-2xl bg-sky-50'>{data.category}</p>
+                <p className='p-2 rounded-2xl bg-sky-50 capitalize'>{data.category.name}</p>
                 <p>Price: {data.price}tk</p>
             </div>
         </div>
